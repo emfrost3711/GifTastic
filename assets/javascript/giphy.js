@@ -46,17 +46,17 @@ $(document).on("click", ".topic-button", function () {
             var p = $("<p>").text("Rating: " + rating);
             $(".gifs").prepend(p, gifImage);
             //stops and starts gifs with on.click event
-            $(".gif").on("click", function () {
-                var state = $(this).attr("data-state");
-                if (state === "still") {
-                    $(this).attr("src", $(this).attr("data-animate"));
-                    $(this).attr("data-state", "animate");
-                } else {
-                    $(this).attr("src", $(this).attr("data-still"));
-                    $(this).attr("data-state", "still");
-                }
-            });
         }
+        $(".gif").on("click", function () {
+            var state = $(this).attr("data-state");
+            if (state === "still") {
+                $(this).attr("src", $(this).attr("data-animate"));
+                $(this).attr("data-state", "animate");
+            } else {
+                $(this).attr("src", $(this).attr("data-still"));
+                $(this).attr("data-state", "still");
+            }
+        });
     });
 });
 
